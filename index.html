@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>QR Generator</title>
+  <script type="text/javascript" src="https://unpkg.com/qr-code-styling/lib/qr-code-styling.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container1">
+
+  <img src="/qrcode-js-master/Kadingilan.png" alt="">
+  <h1>E-SiTizen MANAGEMENT INFORMATION SYSTEM QR CODE GENERATOR</h1>
+</div>
+
+<section id="content">
+  <div>
+    <form id="qrForm" onsubmit="return false;" method="POST">
+      <div class="inputContainer">
+        <label for="dataInput">Full Name</label>
+        <input type="text" onchange="updateQrData();" name="fname" class="textbox" id="dataInput" placeholder="Please enter your Full Name" required>
+
+        <label for="dataInput">Date of Birth</label>
+        <input type="text" onchange="updateQrdob();" name="birthday" class="textbox" id="dob" placeholder="Month/Date/Year" required>
+
+        <label for="dataInput">Age</label>
+        <input type="text" onchange="updateQrage();" name="age" class="textbox" id="age" placeholder="Please enter your Age" required>
+
+        <label for="dataInput">Address</label>
+        <input type="text" onchange="updateQradd();" name="address" class="textbox" id="add" placeholder="Enter your Full Address" required>
+
+        <label for="dataInput">Gender</label>
+        <input type="text" onchange="updateQrblank();" name="gender" class="textbox" id="blank" placeholder="Male/Female" required>
+      </div>
+    </form>
+    <button id="formButton" onclick="download();">Generate QR Code</button>
+  </div>
+  <img src="back1.jpg" id="image">
+  <div id="canvas"></div>
+</section>
+<script type="text/javascript" src="qr.js"></script>
+</body>
+</html>
